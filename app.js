@@ -7,6 +7,8 @@ const shopRoutes = require('./routes/shop');
 const Route404 = require('./routes/404');
 
 app = express();
+app.set('view engine', 'pug');
+app.set('views', 'views');
 
 // const server = http.createServer((req, res) => {
 //     res.write("<h1>Node.js working</h1>");
@@ -17,6 +19,7 @@ app = express();
 //     console.log('In the middle ware');
 //     next();
 // });
+
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/admin', adminRoutes);
