@@ -26,5 +26,5 @@ app.use('/admin', adminRoutes.routes);
 app.use(shopRoutes);
 app.use(Route404);
 
-console.log("server started at port 3500");
+console.log("server started at port 3000");
 app.listen(3000);
