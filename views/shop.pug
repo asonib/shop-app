@@ -3,8 +3,9 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        title Add Product
+        title #{docTitle}
         link(rel="stylesheet" href="css/main.css")
+        link(rel="stylesheet" href="css/bootstrap.min.css")
 
     body
         header.main-header
@@ -17,5 +18,18 @@ html(lang="en")
 
         main
             h1 My Products
-            p List of all the products...
+            if prods.length > 0
+                each product in prods
+                    div.row
+                        div.col-sm-6
+                            div.card(style="width: 18rem;")
+                                img.card-img-top(src="" alt="Card image cap")
+                                div.card-body
+                                    h5.card-title #{product.title}
+                                    p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+                                    a(href="#").btn.btn-primary Order
+            else
+                h1 No Products
+        script(src="js/bootstrap.min.js")
+                
     
