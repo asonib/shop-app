@@ -1,9 +1,10 @@
 extends layouts/main-layout.pug
 
-block head
+block head-comp
     title Add Product
-block body
-    main
-        form(action="/admin/add-product" method="POST")
-            input(type="text" name="title")
-            button(type="submit") Add Product
+block body-comp
+    form(action="/admin/add-product" method="POST")
+        div.form-group
+            label Item name 
+            input(type="text" placeholder="Enter Name" name="title")
+            button.btn.btn-primary(type="submit") Submit

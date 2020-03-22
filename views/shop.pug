@@ -1,10 +1,8 @@
 extends layouts/main-layout.pug
 
-block head
+block head-comp
     title #{docTitle}
-    link(rel="stylesheet" href="css/bootstrap.min.css")
-
-block body
+block body-comp
     main
         h1 My Products
         if prods.length > 0
@@ -12,13 +10,12 @@ block body
                 div.row
                     div.col-sm-6
                         div.card(style="width: 18rem;")
-                            img.card-img-top(src="" alt="Card image cap")
+                            img.card-img-top(src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQHtjHhi5hl0JwUFclp8BadXD-5mS038TSwpS0UhkFYOSs8Sj-4" alt="Card image cap")
                             div.card-body
                                 h5.card-title #{product.title}
                                 p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
                                 a(href="#").btn.btn-primary Order
         else
             h1 No Products
-    script(src="js/bootstrap.min.js")
                 
     
