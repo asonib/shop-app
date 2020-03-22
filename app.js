@@ -22,12 +22,9 @@ app.set('views', 'views');
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/admin', adminRoutes);
+app.use('/admin', adminRoutes.routes);
 app.use(shopRoutes);
 app.use(Route404);
 
-
-
-
-console.log("server started at port 3000");
+console.log("server started at port 3500");
 app.listen(3000);
