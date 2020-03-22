@@ -5,8 +5,8 @@ const adminRoutes = require('./admin');
 
 router.get('/', (req, res, next) => {
     console.log(adminRoutes.products);
-    //res.render('shop');
-    res.sendFile(path.join(__dirname, '../', 'views', 'shop.html'));
+    res.render('shop');
+    //res.sendFile(path.join(__dirname, '../', 'views', 'shop.html'));
 });
 
 module.exports = router;
