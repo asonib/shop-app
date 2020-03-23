@@ -4,12 +4,13 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet" href="css/bootstrap.min.css")
+        script(src="js/bootstrap.min.js")
         block head-comp
     body
         ul.nav.nav-tabs
             li.nav-item
-                a.nav-link.active(href="/") Shop
+                a.nav-link(href="/") Shop
             li.nav-item
                 a.nav-link(href="/admin/add-product") Add Product
         block body-comp
-        script(src="js/bootstrap.min.js")
+        

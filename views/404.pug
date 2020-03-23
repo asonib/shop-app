@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title("Page not Found")
-    head
-    body
-        h1 Page Not Found
-    body
-html
+extends layouts/main-layout.pug
+
+block head-comp
+    title 404 Error
+block body-comp
+    h1 Page not found
