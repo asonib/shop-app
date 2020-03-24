@@ -5,7 +5,7 @@ const adminRoutes = require('./admin');
 
 router.get('/', (req, res, next) => {
     console.log(adminRoutes.products);
-    res.render('shop', {prods: adminRoutes.products, docTitle: 'My Shop'});
+    res.render('shop', {prods: adminRoutes.products, docTitle: 'My Shopping Cart'});
     //res.sendFile(path.join(__dirname, '../', 'views', 'shop.html'));
 });
 

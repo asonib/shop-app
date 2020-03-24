@@ -1,0 +1,29 @@
+<%- include('./includes/head.ejs') %>
+    <title> <%=docTitle %> </title>
+</head>
+
+<body>
+    <%- include('./includes/navigation.ejs') %>
+    <main>
+        <h1>My Products</h1>
+        <% if(prods.length > 0){ %>
+            <div class="row">
+                <% for(let products of prods){ %></for>
+                    <div class="col-sm-3">
+                        <div class="card" style="width: 18rem;"><img class="card-img-top"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQHtjHhi5hl0JwUFclp8BadXD-5mS038TSwpS0UhkFYOSs8Sj-4"
+                                alt="Card image cap" />
+                            <div class="card-body">
+                                <h5 class="card-title"><%=products.title %></h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                    the card's content.</p><a class="btn btn-primary" href="#">Order</a>
+                            </div>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+        <% }else{ %>
+            <h1>No Products</h1>
+        <% } %>
+    </main>
+    <%- include('./includes/end.ejs') %>

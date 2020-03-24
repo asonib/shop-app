@@ -6,7 +6,7 @@ const shopRoutes = require('./routes/shop');
 const Route404 = require('./routes/404');
 
 app = express();
-app.set('view engine', 'pug');
+app.set('view engine', 'ejs');
 app.set('views', 'views');
 
 // const server = http.createServer((req, res) => {

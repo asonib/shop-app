@@ -1,0 +1,13 @@
+<%- include('./includes/head.ejs') %>
+    <title><%=docTitle %></title>
+</head>
+
+<body>
+    <%- include('./includes/navigation.ejs') %>
+    <main>
+        <form action="/admin/add-product" method="POST">
+            <div class="form-group"><label>Item name </label><input type="text" placeholder="Enter Name"
+                    name="title" /><button class="btn btn-primary" type="submit">Submit</button></div>
+        </form>
+    </main>
+<%- include('./includes/end.ejs') %>
